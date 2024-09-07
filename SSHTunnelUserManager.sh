@@ -61,6 +61,7 @@ kill_user_session() {
 
 # Function to lock/unlock users with user selection by number
 lock_unlock_user() {
+    list_locked_vpn_users
     select_user
     if [ -n "$selected_user" ]; then
         read -p "(L) Lock / (U) Unlock? " action
@@ -70,7 +71,9 @@ lock_unlock_user() {
                     echo "User '$selected_user' is already locked."
                 else
                     echo "Locking user: $selected_user"
+                    user_pid=$(ps lax | grep "$selected_user" | grep -v grep | awk '{print $3}')
                     sudo usermod -L "$selected_user"
+                    sudo kill -9 $user_pid
                     echo "User '$selected_user' has been locked."
                 fi
                 ;;
