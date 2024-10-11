@@ -1,6 +1,7 @@
 SSH Sessions Overview:
 # SSH User and Tunnel Manager
 **Example :** 
+```
 -----------------------------------------
 | User          | Connections           |
 -----------------------------------------
@@ -24,6 +25,7 @@ Choose an action:
 6) Remove a user
 7) Exit
 Enter your choice: 
+```
 
 **SSH User and Tunnel Manager** is a comprehensive tool designed for managing SSH sessions, users, and tunneling in a Unix-like environment. This script provides functionalities to display active SSH sessions, manage users, and handle tunneling tasks, including proxy usage and anti-filtering considerations.
 
