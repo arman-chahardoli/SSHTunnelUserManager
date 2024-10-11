@@ -45,5 +45,9 @@ Enter your choice:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/SSHTunnelUserManager.git
+   ```
+2. **Run :**
+   ```bash
    cd SSHTunnelUserManager
-
+   . ./SSHTunnelUserManager.sh
+   ```
